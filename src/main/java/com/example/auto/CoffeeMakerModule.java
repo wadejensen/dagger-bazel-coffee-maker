@@ -7,8 +7,12 @@ import com.example.coffee.Thermosiphon;
 import dagger.Module;
 import dagger.Provides;
 
+import javax.inject.Singleton;
+
 @Module
-public class CoffeeMakerModule {
+class CoffeeMakerModule {
+
+  @Singleton // ensures that the CoffeeMaker and the Thermosiphon get the SAME heater
   @Provides
   static Heater provideHeater() {
     return new ElectricHeater();

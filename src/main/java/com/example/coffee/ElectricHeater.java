@@ -1,5 +1,8 @@
 package com.example.coffee;
 
+import javax.inject.Singleton;
+
+@Singleton
 public class ElectricHeater implements Heater {
   boolean heating;
 
